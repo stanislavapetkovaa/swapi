@@ -32,7 +32,7 @@ public class PeopleController {
     PlanetRepository planetRepository;
 
 
-        @PostMapping(value="/people")
+    @PostMapping(value="/people")
     private People creaPerson(@RequestBody People person){
 
 

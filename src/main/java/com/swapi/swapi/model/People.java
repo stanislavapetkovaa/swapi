@@ -30,12 +30,13 @@ public class People {
     @JoinTable(name="person_films", joinColumns = @JoinColumn(name="people_id"),
     inverseJoinColumns =  @JoinColumn(name="film_id"))
     private List<Films> films;
+    
 
     @ManyToOne
     @JoinColumn(name="species_id")
    private Species species;
 
-   
+    
 
 
  
