@@ -26,6 +26,18 @@ public class People {
 
     
 
+    public Long getId() {
+        return id;
+    }
+
+
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+
+
     @ManyToMany
     @JoinTable(name="person_films", joinColumns = @JoinColumn(name="people_id"),
     inverseJoinColumns =  @JoinColumn(name="film_id"))
