@@ -2,6 +2,8 @@ package com.swapi.swapi.model;
 
 import java.time.LocalDate;
 import java.util.List;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -198,7 +200,7 @@ public class People {
 
 
 
-@ManyToMany
+@ManyToMany(cascade = CascadeType.ALL)
    @JoinTable(name="person_starships",joinColumns = @JoinColumn(name = "people_id"),
    inverseJoinColumns = @JoinColumn(name = "starship_id"))
    private List<Starships> starships;

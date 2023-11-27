@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -206,14 +207,12 @@ public class Starships {
     }
 
 
-    public List<People> getPilots() {
+    public Set<Long> getPilots() {
         return pilots;
     }
 
 
-    public void setPilots(List<People> pilots) {
-        this.pilots = pilots;
-    }
+   
 
 
     
