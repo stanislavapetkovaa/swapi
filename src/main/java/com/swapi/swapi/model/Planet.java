@@ -29,9 +29,96 @@ public class Planet {
     private Integer surface_water;
     private Long population;
    
-    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss", timezone="Europe/Zagreb")
-     private LocalDate createdAt;
-     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss", timezone="Europe/Zagreb")
+    
+     public String getName() {
+      return name;
+    }
+
+    public void setName(String name) {
+      this.name = name;
+    }
+
+    public Integer getRotation_period() {
+      return rotation_period;
+    }
+
+    public void setRotation_period(Integer rotation_period) {
+      this.rotation_period = rotation_period;
+    }
+
+    public Integer getOrbital_period() {
+      return orbital_period;
+    }
+
+    public void setOrbital_period(Integer orbital_period) {
+      this.orbital_period = orbital_period;
+    }
+
+    public String getClimate() {
+      return climate;
+    }
+
+    public void setClimate(String climate) {
+      this.climate = climate;
+    }
+
+    public Integer getDiameter() {
+      return diameter;
+    }
+
+    public void setDiameter(Integer diameter) {
+      this.diameter = diameter;
+    }
+
+    public String getGravity() {
+      return gravity;
+    }
+
+    public void setGravity(String gravity) {
+      this.gravity = gravity;
+    }
+
+    public String getTerrain() {
+      return terrain;
+    }
+
+    public void setTerrain(String terrain) {
+      this.terrain = terrain;
+    }
+
+    public Integer getSurface_water() {
+      return surface_water;
+    }
+
+    public void setSurface_water(Integer surface_water) {
+      this.surface_water = surface_water;
+    }
+
+    public Long getPopulation() {
+      return population;
+    }
+
+    public void setPopulation(Long population) {
+      this.population = population;
+    }
+
+    public LocalDate getCreatedAt() {
+      return createdAt;
+    }
+
+    public void setCreatedAt(LocalDate createdAt) {
+      this.createdAt = createdAt;
+    }
+
+    public LocalDate getEditAt() {
+      return editAt;
+    }
+
+    public void setEditAt(LocalDate editAt) {
+      this.editAt = editAt;
+    }
+
+    private LocalDate createdAt;
     private LocalDate editAt;
 
     @ManyToMany

@@ -42,7 +42,151 @@ public class People {
  
 
 
-   @ManyToMany
+   public String getName() {
+        return name;
+    }
+
+
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+
+    public Long getHeight() {
+        return height;
+    }
+
+
+
+    public void setHeight(Long height) {
+        this.height = height;
+    }
+
+
+
+    public Double getMass() {
+        return mass;
+    }
+
+
+
+    public void setMass(Double mass) {
+        this.mass = mass;
+    }
+
+
+
+    public String getHair_color() {
+        return hair_color;
+    }
+
+
+
+    public void setHair_color(String hair_color) {
+        this.hair_color = hair_color;
+    }
+
+
+
+    public String getBirth_year() {
+        return birth_year;
+    }
+
+
+
+    public void setBirth_year(String birth_year) {
+        this.birth_year = birth_year;
+    }
+
+
+
+    public LocalDate getCreatedAt() {
+        return createdAt;
+    }
+
+
+
+    public void setCreatedAt(LocalDate createdAt) {
+        this.createdAt = createdAt;
+    }
+
+
+
+    public LocalDate getEditAt() {
+        return editAt;
+    }
+
+
+
+    public void setEditAt(LocalDate editAt) {
+        this.editAt = editAt;
+    }
+
+
+
+    public String getGender() {
+        return gender;
+    }
+
+
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+
+
+    public List<Films> getFilms() {
+        return films;
+    }
+
+
+
+    public void setFilms(List<Films> films) {
+        this.films = films;
+    }
+
+
+
+    public Species getSpecies() {
+        return species;
+    }
+
+
+
+    public void setSpecies(Species species) {
+        this.species = species;
+    }
+
+
+
+    public List<Starships> getStarships() {
+        return starships;
+    }
+
+
+
+    public void setStarships(List<Starships> starships) {
+        this.starships = starships;
+    }
+
+
+
+    public Planet getPlanet() {
+        return planet;
+    }
+
+
+
+    public void setPlanet(Planet planet) {
+        this.planet = planet;
+    }
+
+
+
+@ManyToMany
    @JoinTable(name="person_starships",joinColumns = @JoinColumn(name = "people_id"),
    inverseJoinColumns = @JoinColumn(name = "starship_id"))
    private List<Starships> starships;
